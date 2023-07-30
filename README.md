@@ -1,6 +1,7 @@
 # devops-netology
 ### change number 1
 ### change number 2
+### change number 3
 
 # Local .terraform directories
 **/.terraform/*		- игнорировать все файлы и папки в директории .terraform, которая может лежать в любом месте репозотория 
