@@ -33,14 +33,16 @@
 	использовал команду - $ git log -S
 	
 6. Найдите все коммиты, в которых была изменена функция globalPluginDirs
-	65c4ba7363 Remove terraform binary
-	125eb51dc4 Remove accidentally-committed binary
-	22c121df86 Bump compatibility version to 1.3.0 for terraform core release (#30988)
-	7c7e5d8f0a Don't show data while input if sensitive
-	35a058fb3d main: configure credentials from the CLI config file
-	c0b1761096 prevent log output during init
-	8364383c35 Push plugin discovery down into command package
-	использовал команду - $ git log -S
+	$ git grep globalPluginDirs
+	в файле - plugins.go менялось тело функции
+	далее применяю команду - $ git log -L :globalPluginDirs:plugins.go
+	получаю коммиты
+	commit 78b12205587fe839f10d946ea3fdc06719decb05
+	commit 52dbf94834cb970b510f2fba853a5b49ad9b1a46
+	commit 41ab0aef7a0fe030e84018973a64135b11abcd70
+	commit 66ebff90cdfaa6938f26f908c7ebad8d547fea17
+	commit 8364383c359a6b738a436d1b7745ccdce178df47
+
 
 7. Кто автор функции synchronizedWriters
 	Author: Martin Atkins <mart@degeneration.co.uk>
