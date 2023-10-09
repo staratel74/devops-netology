@@ -111,8 +111,11 @@ maintf_04: ![maintf_04](img/maintf_04.png)
 
 #### Найдите и удалите все более не используемые переменные проекта.
 * ссылки на код (не используемые переменные закомментарил, чтобы видно было какие не используются)
-* https://github.com/staratel74/PythonBasic/blob/main/vms_platform.tf
-* 
+* https://github.com/staratel74/devops-netology/blob/main/Terraform/Task_02/src/vms_platform.tf
+* https://github.com/staratel74/devops-netology/blob/main/Terraform/Task_02/src/variables.tf
+* https://github.com/staratel74/devops-netology/blob/main/Terraform/Task_02/src/main.tf
+* https://github.com/staratel74/devops-netology/blob/main/Terraform/Task_02/src/locals.tf
+
 #### Проверьте terraform plan. Изменений быть не должно.
 
 terraform_plan_02: ![terraform_plan_02](img/terraform_plan_02.png)
