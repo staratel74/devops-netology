@@ -1,0 +1,100 @@
+root@serv10:~/ansible# ansible-playbook site.yml --diff
+
+PLAY [Install Clickhouse] ********************************************************************************************************************************
+
+TASK [Gathering Facts] ***********************************************************************************************************************************
+ok: [clickhouse-01]
+
+TASK [Get clickhouse distrib] ****************************************************************************************************************************
+changed: [clickhouse-01] => (item=clickhouse-client)
+changed: [clickhouse-01] => (item=clickhouse-server)
+failed: [clickhouse-01] (item=clickhouse-common-static) => {"ansible_loop_var": "item", "changed": false, "dest": "./clickhouse-common-static-22.3.3.44.rp                                                                              m", "elapsed": 0, "item": "clickhouse-common-static", "msg": "Request failed", "response": "HTTP Error 404: Not Found", "status_code": 404, "url": "https:                                                                              //packages.clickhouse.com/rpm/stable/clickhouse-common-static-22.3.3.44.noarch.rpm"}
+
+TASK [Get clickhouse distrib] ****************************************************************************************************************************
+changed: [clickhouse-01]
+
+TASK [Install clickhouse packages] ***********************************************************************************************************************
+changed: [clickhouse-01]
+
+TASK [Flush handlers] ************************************************************************************************************************************
+
+RUNNING HANDLER [Start clickhouse service] ***************************************************************************************************************
+changed: [clickhouse-01]
+
+PLAY [Install Vector] ************************************************************************************************************************************
+
+TASK [Gathering Facts] ***********************************************************************************************************************************
+ok: [clickhouse-01]
+
+TASK [Get vector distrib] ********************************************************************************************************************************
+changed: [clickhouse-01]
+
+TASK [Create directrory for vector] **********************************************************************************************************************
+--- before
++++ after
+@@ -1,4 +1,4 @@
+ {
+     "path": "/opt/vector/",
+-    "state": "absent"
++    "state": "directory"
+ }
+
+changed: [clickhouse-01]
+
+TASK [Extract Vector] ************************************************************************************************************************************
+changed: [clickhouse-01]
+
+TASK [Set template for config vector] ********************************************************************************************************************
+--- before: /opt/vector/config/vector.yaml
++++ after: /root/.ansible/tmp/ansible-local-147041czry3s73/tmppivm_47v/vector.j2
+@@ -1,24 +1,7 @@
+-#                                    __   __  __
+-#                                    \ \ / / / /
+-#                                     \ V / / /
+-#                                      \_/  \/
+-#
+-#                                    V E C T O R
+-#                                   Configuration
+-#
+-# ------------------------------------------------------------------------------
+-# Website: https://vector.dev
+-# Docs: https://vector.dev/docs
+-# Chat: https://chat.vector.dev
+-# ------------------------------------------------------------------------------
+-
+-# Change this to use a non-default directory for Vector data storage:
+-# data_dir: "/var/lib/vector"
+-
+ # Random Syslog-formatted logs
+ sources:
+   dummy_logs:
+-    type: "demo_logs"
++    type: "my_demo_logs"
+     format: "syslog"
+     interval: 1
+
+@@ -26,7 +9,7 @@
+ # See the Vector Remap Language reference for more info: https://vrl.dev
+ transforms:
+   parse_logs:
+-    type: "remap"
++    type: "my_remap"
+     inputs: ["dummy_logs"]
+     source: |
+       . = parse_syslog!(string!(.message))
+@@ -38,10 +21,3 @@
+     inputs: ["parse_logs"]
+     encoding:
+       codec: "json"
+-
+-# Vector's GraphQL API (disabled by default)
+-# Uncomment to try it out with the `vector top` command or
+-# in your browser at http://localhost:8686
+-# api:
+-#   enabled: true
+-#   address: "127.0.0.1:8686"
+
+changed: [clickhouse-01]
+
+PLAY RECAP ***********************************************************************************************************************************************
+clickhouse-01              : ok=9    changed=7    unreachable=0    failed=0    skipped=0    rescued=1    ignored=0
