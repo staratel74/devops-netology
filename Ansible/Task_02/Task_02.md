@@ -34,7 +34,7 @@
 
 #### 7. Запустите playbook на `prod.yml` окружении с флагом `--diff`. Убедитесь, что изменения на системе произведены.
 * решение: вывод команды ansible-playbook site.yml --diff (на один экран не входит, скриншот не удобно делать)  
-* ссылка на файл: 
+* ссылка на файл: https://github.com/staratel74/devops-netology/blob/main/Ansible/Task_02/output%20diff.txt
 
 
 #### 8. Повторно запустите playbook с флагом `--diff` и убедитесь, что playbook идемпотентен.
@@ -55,8 +55,8 @@
 
 
 #### 10. Готовый playbook выложите в свой репозиторий, поставьте тег `08-ansible-02-playbook` на фиксирующий коммит, в ответ предоставьте ссылку на него.
-* ссылка на inventory: 
-* ссылка на playbook: 
-* ссылка на vars: 
+* ссылка на inventory: https://github.com/staratel74/devops-netology/blob/main/Ansible/Task_02/inventory/prod.yml
+* ссылка на playbook: https://github.com/staratel74/devops-netology/blob/main/Ansible/Task_02/site.yml
+* ссылка на vars: https://github.com/staratel74/devops-netology/blob/main/Ansible/Task_02/group_vars/clickhouse/vars.yml
 
 ## END
