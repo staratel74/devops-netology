@@ -39,6 +39,13 @@
 
 - name: Install Vector
   hosts: clickhouse
+  handlers:
+    - name: Start vector
+      become: true
+      ansible.builtin.service:
+        name: vector-server
+        state: restarted
+
   tasks:
     - name: Get vector distrib
       get_url:
@@ -64,4 +71,5 @@
       template:
         src: templates/vector.j2
         dest: /opt/vector/config/vector.yaml
+      notify: Start vector
       tags: vector

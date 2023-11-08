@@ -1,3 +1,8 @@
+## Домашнее задание к занятию 2 «Работа с Playbook» Доработка.
+* дописал handler на перезапуск вектора
+* ссылка на доработанный playbook: https://github.com/staratel74/devops-netology/blob/main/Ansible/Task_02/site.yml
+
+
 ## Домашнее задание к занятию 2 «Работа с Playbook»
 
 
@@ -50,7 +55,7 @@
 * Все задачи пометил тагом - tags: vector. 
 * Использовал модули: get_url, file, unarchive, template. 
 * Шаблон в конфиге вектора, по пути /opt/vector/config/vector.yaml устанавливает два параметра, используя переменные: 
-* dummy_logs_type: "my_demo_logs", 
+  * dummy_logs_type: "my_demo_logs",    
 * parse_logs_type: "my_remap".
 
 
