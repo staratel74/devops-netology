@@ -30,6 +30,6 @@
 
 04: ![04](img/04.png)
 
-* ссылка на playbook:
+* ссылка на playbook: https://github.com/staratel74/devops-netology/blob/main/Ansible/Task_03/site.yml
 
 ## END
