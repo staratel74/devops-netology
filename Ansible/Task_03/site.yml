@@ -1,0 +1,107 @@
+---
+#################################### Install Clickhouse (Centos) ##########################################
+- name: Install Clickhouse
+  hosts: clickhouse
+  handlers:
+    - name: Start clickhouse service
+      become: true
+      ansible.builtin.service:
+        name: clickhouse-server
+        state: restarted
+  tasks:
+    - block:
+        - name: Get clickhouse distrib
+          ansible.builtin.get_url:
+            url: "https://packages.clickhouse.com/rpm/stable/{{ item }}-{{ clickhouse_version }}.noarch.rpm"
+            dest: "./{{ item }}-{{ clickhouse_version }}.rpm"
+          with_items: "{{ clickhouse_packages }}"
+      rescue:
+        - name: Get clickhouse distrib
+          ansible.builtin.get_url:
+            url: "https://packages.clickhouse.com/rpm/stable/clickhouse-common-static-{{ clickhouse_version }}.x86_64.rpm"
+            dest: "./clickhouse-common-static-{{ clickhouse_version }}.rpm"
+    - name: Install clickhouse packages
+      become: true
+      ansible.builtin.yum:
+        disable_gpg_check: true
+        name:
+          - clickhouse-common-static-{{ clickhouse_version }}.rpm
+          - clickhouse-client-{{ clickhouse_version }}.rpm
+          - clickhouse-server-{{ clickhouse_version }}.rpm
+      notify: Start clickhouse service
+    - name: Flush handlers
+      ansible.builtin.meta: flush_handlers
+    - name: Create database
+      ansible.builtin.command: "clickhouse-client -q 'create database logs;'"
+      register: create_db
+      failed_when: create_db.rc != 0 and create_db.rc !=82
+      changed_when: create_db.rc == 0
+#################################### Install Vector (Ubuntu) ##########################################
+- name: Install Vector
+  hosts: vector
+  handlers:
+    - name: Start vector
+      become: true
+      ansible.builtin.service:
+        name: vector
+        state: restarted
+  tasks:
+    - name: Download Vector deb package
+      ansible.builtin.get_url:
+        url:  "{{ vector_url }}" # "https://packages.timber.io/vector/0.34.0/vector_0.34.0-1_amd64.deb"
+        dest: "/tmp/vector_0.34.0-1_amd64.deb"
+    - name: Install Vector using apt
+      ansible.builtin.apt:
+        deb: "/tmp/vector_0.34.0-1_amd64.deb"
+        state: present
+    - name: Set template for config vector
+      become: true
+      template:
+        src: templates/vector.j2
+        dest: /etc/vector/vector.yaml
+    - name: Set template for service vector
+      become: true
+      template:
+        src: templates/vector.service.j2
+        dest: /etc/systemd/system/vector.service
+      notify: Start vector
+      tags: vector
+#################################### Install apache (Ubuntu) ############################
+- name: Install webserver apache
+  hosts: lighthouse
+  handlers:
+    - name: Remove existing directory
+      become: true
+      ansible.builtin.file:
+        path: /var/www/html
+        state: absent
+  tasks:
+    - name: APACHE | Install APACHE
+      become: true
+      ansible.builtin.apt:
+        name: apache2
+        state: present
+      notify: Remove existing directory
+################################## Install lighthouse (Ubuntu) ########################
+- name: Install lighthouse
+  hosts: lighthouse
+  handlers:
+    - name: Reload apache
+      become: true
+      ansible.builtin.service:
+        name: apache2
+        state: restarted
+  pre_tasks:
+     - name: GIT | Install git
+       become: true
+       ansible.builtin.apt:
+        name: git
+        state: present
+  tasks:
+     - name: Lighthouse | Copy from git
+       become: true
+       ansible.builtin.git:
+         repo: "{{ lighthouse_url }}"
+         version: master
+         dest: /var/www/html/
+       notify: Reload apache
