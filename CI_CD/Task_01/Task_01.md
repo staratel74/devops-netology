@@ -22,7 +22,7 @@
 
 05: ![05](img/05.png)
 
-Ссылка на workflow.xml: 
+Ссылка на workflow.xml: https://github.com/staratel74/devops-netology/blob/main/CI_CD/Task_01/workflow.xml
  
 
 ## END
