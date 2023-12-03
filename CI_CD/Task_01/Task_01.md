@@ -25,4 +25,15 @@
 Ссылка на workflow.xml: https://github.com/staratel74/devops-netology/blob/main/CI_CD/Task_01/workflow.xml
  
 
+## Домашнее задание к занятию 7 «Жизненный цикл ПО» ДОРАБОТКА
+* создал второй workflow02, для остальных задач.
+
+06: ![06](img/06.png)
+
+* создал задачу с типом epic, к ней привязал две задачи с типом task и провел их по всему workflow02, до Done
+add
+07: ![07](img/07.png)
+
+Ссылка на workflow02.xml: https://github.com/staratel74/devops-netology/blob/main/CI_CD/Task_01/workflow02.xml
+
 ## END
