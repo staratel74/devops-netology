@@ -43,8 +43,8 @@
 #### Задание 4
 Сохраните ваш Dashboard.Для этого перейдите в настройки Dashboard, выберите в боковом меню «JSON MODEL». Далее скопируйте отображаемое json-содержимое в отдельный файл и сохраните его.
 В качестве решения задания приведите листинг этого файла.
-
-
+* решение
+  * ссылка на json: https://github.com/staratel74/devops-netology/blob/main/Monitoring/Task_02/Dashboard_02.json
 
 
 ## END
