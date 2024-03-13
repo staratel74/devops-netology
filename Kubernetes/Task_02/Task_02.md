@@ -13,7 +13,7 @@
 
 02: ![02](img/02.png)
 
-* ссылка на манифест для pod-hello-world:  
+* ссылка на манифест для pod-hello-world: https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_02/pod-hello-world.yaml  
 
 #### Задание 2. Создать Service и подключить его к Pod
 1. Создать Pod с именем netology-web.
@@ -25,8 +25,8 @@
 
 04: ![04](img/04.png)
 
-* ссылка на манифест для pod-netology-web:
-* ссылка на манифест для netology-svc: 
+* ссылка на манифест для pod-netology-web: https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_02/pod-netology-web.yaml
+* ссылка на манифест для netology-svc: https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_02/netology-svc.yaml 
 
 
 ## END
