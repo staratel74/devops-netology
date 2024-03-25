@@ -24,10 +24,10 @@
 * проверяем с помощью curl, что из пода есть доступ до приложений из п.1.
 * 05: ![05](img/05.png)
 * ссылки на манифесты:
-* app1.yaml (одна реплика) - 
-* app2.yaml (две реплики) - 
-* multitool.yaml - 
-* service.yaml - 
+* app1.yaml (одна реплика) - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_03/app1.yaml
+* app2.yaml (две реплики) - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_03/app2.yaml
+* multitool.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_03/multitool.yaml
+* service.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_03/service.yaml
 
 #### Задание 2. Создать Deployment и обеспечить старт основного контейнера при выполнении условий
 1. Создать Deployment приложения nginx и обеспечить старт контейнера только после того, как будет запущен сервис этого приложения.
@@ -42,6 +42,6 @@
 * стартуем сервис  - name: my-service и смотрим на поды, контейнер - Running:
 * 07: ![07](img/07.png)
 * ссылка на манифест:
-* nginx-deployment.yaml - 
+* nginx-deployment.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_03/nginx-deployment.yaml 
 
 ## END
