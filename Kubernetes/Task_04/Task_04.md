@@ -9,21 +9,20 @@
 1. Создать Deployment приложения, состоящего из двух контейнеров (nginx и multitool), с количеством реплик 3 шт.
 * решение:
 * 01: ![01](img/01.png)
-* ссылка на манифест Deployment - 
+* ссылка на манифест Deployment - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_04/app3.yaml
 2. Создать Service, который обеспечит доступ внутри кластера до контейнеров приложения из п.1 по порту 9001 — nginx 80, по 9002 — multitool 8080.
 * решение:
 * 02: ![02](img/02.png)
-* ссылка на манифест Service -
+* ссылка на манифест Service - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_04/service.yaml
 3. Создать отдельный Pod с приложением multitool и убедиться с помощью curl, что из пода есть доступ до приложения из п.1 по разным портам в разные контейнеры.
 4. Продемонстрировать доступ с помощью curl по доменному имени сервиса.
 5. Предоставить манифесты Deployment и Service в решении, а также скриншоты или вывод команды п.4.
 * решение:
 * 03: ![03](img/03.png)
-
+* ссылка на манифест multitool - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_04/multitool.yaml
 
 
 * 04: ![04](img/04.png)
-
 
 
 #### Задание 2. Создать Service и обеспечить доступ к приложениям снаружи кластера
@@ -36,6 +35,6 @@
 
 * 06: ![06](img/06.png)
 
-ссылка на манифест Service-NodePort - 
+ссылка на манифест Service-NodePort - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_04/service_NodePort.yaml
 
 ## END
