@@ -14,7 +14,7 @@
 4. Продемонстрировать, что multitool может читать файл, который периодоически обновляется.
 5. Предоставить манифесты Deployment в решении, а также скриншоты или вывод команды из п. 4.
 * 03: ![03](img/03.png)
-* ссылка на манифест volume-deployment.yaml - 
+* ссылка на манифест volume-deployment.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_06/volume-deployment.yaml
 
 #### Задание 2. Создать DaemonSet приложения, которое может прочитать логи ноды.
 1. Создать DaemonSet приложения, состоящего из multitool.
@@ -27,6 +27,6 @@
 * 05: ![05](img/05.png)
 
 * 06: ![06](img/06.png)
-* ссылка на манифест volume-daemonset.yaml -
+* ссылка на манифест volume-daemonset.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_06/volume-daemonset.yaml
 
 ## END
