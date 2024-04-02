@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: volume-daemonset
+  labels:
+    app: main2
+spec:
+  selector:
+    matchLabels:
+      app: main2
+  template:
+    metadata:
+      labels:
+        app: main2
+    spec:
+      containers:
+      - name: network-multitool
+        image: wbitt/network-multitool
+        volumeMounts:
+        - name: vol-noda
+          mountPath: /333
+        env:
+        - name: HTTP_PORT
+          value: "80"
+        ports:
+        - containerPort: 80
+          name: http-port
+      volumes:
+      - name: vol-noda
+        hostPath:
+          path: /var/log
