@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pvc-deployment
+  labels:
+    app: main2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: main2
+  template:
+    metadata:
+      labels:
+        app: main2
+    spec:
+      containers:
+      - name: busybox
+        image: busybox
+        command: ['sh', '-c', 'while true; do echo It done! >> /111/123.txt; sleep 5; done']
+        volumeMounts:
+        - name: my-vol-pvc
+          mountPath: /111
+      - name: network-multitool
+        image: wbitt/network-multitool
+        volumeMounts:
+        - name: my-vol-pvc
+          mountPath: /222
+        env:
+        - name: HTTP_PORT
+          value: "80"
+        ports:
+        - containerPort: 80
+          name: http-port
+      volumes:
+      - name: my-vol-pvc
+        persistentVolumeClaim:
+          claimName: pvc-vol
