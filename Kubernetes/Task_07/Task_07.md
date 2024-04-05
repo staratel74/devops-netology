@@ -25,9 +25,9 @@
 * 06: ![06](img/06.png)
 
 6. Предоставить манифесты, а также скриншоты или вывод необходимых команд.
-* ссылка на volume-deployment.yaml - 
-* ссылка на pv-vol.yaml - 
-* ссылка на pvc-vol.yaml - 
+* ссылка на volume-deployment.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_07/volume-deployment.yaml
+* ссылка на pv-vol.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_07/pv-vol.yaml
+* ссылка на pvc-vol.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_07/pvc-vol.yaml
 
 
 #### Задание 2. Создать Deployment приложения, которое может хранить файлы на NFS с динамическим созданием PV. 
@@ -37,6 +37,6 @@
 * решение:
 * 07: ![07](img/07.png)
 4. Предоставить манифесты, а также скриншоты или вывод необходимых команд.
-* ссылка на volume-deployment-2.yaml -
-* ссылка на pvc-nfs.yaml - 
+* ссылка на volume-deployment-2.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_07/volume-deployment-2.yaml
+* ссылка на pvc-nfs.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_07/pvc-nfs.yaml
 ## END
