@@ -19,9 +19,9 @@
 * смотрим web-страницу curl 192.168.100.8:32000
 * 03: ![03](img/03.png)
 5. Предоставить манифесты, а также скриншоты или вывод необходимых команд.
-* ссылка на deployment-2.yaml - 
-* ссылка на index-html-configmap.yaml - 
-* ссылка на myservice.yaml -  
+* ссылка на deployment-2.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_08/deployment-2.yaml
+* ссылка на index-html-configmap.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_08/index-html-configmap.yaml
+* ссылка на myservice.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_08/myservice.yaml 
 
 #### Задание 2. Создать приложение с вашей веб-страницей, доступной по HTTPS
 
@@ -38,11 +38,11 @@
 * решение:
 * 07: ![07](img/07.png)
 5. Предоставить манифесты, а также скриншоты или вывод необходимых команд.
-* ссылка на deployment-nginx.yaml - 
-* ссылка на index-html-configmap.yaml - 
-* ссылка на secret.yaml -
-* ссылка на ingress.yaml - 
-* ссылка на myservice-nginx.yaml - 
+* ссылка на deployment-nginx.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_08/deployment-nginx.yaml
+* ссылка на index-html-configmap.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_08/index-html-configmap.yaml
+* ссылка на secret.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_08/secret.yaml
+* ссылка на ingress.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_08/ingress.yaml
+* ссылка на myservice-nginx.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_08/myservice-nginx.yaml 
 
 
 ## END
