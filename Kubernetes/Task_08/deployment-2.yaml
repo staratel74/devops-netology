@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-pod
+  labels:
+    app: myapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: busybox
+        image: busybox
+        command: ['sh', '-c', 'until nslookup my-service.default.svc.cluster.local; do echo waiting for my-service; sleep 2; done;']
+      - name: network-multitool
+        image: wbitt/network-multitool
+        volumeMounts:
+          - name: index-html-configmap 
+            mountPath: /usr/share/nginx/html
+        env:
+        - name: HTTP_PORT
+          value: "80"
+        ports:
+        - containerPort: 80
+          name: http-port
+      volumes:
+      - name: index-html-configmap 
+        configMap:
+          name: index-html-configmap 
