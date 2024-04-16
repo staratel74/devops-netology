@@ -18,8 +18,8 @@
 
 * 03: ![03](img/03.png)
 5. Предоставьте манифесты и скриншоты и/или вывод необходимых команд.
-* ссылка на role.yaml -  
-* ссылка на role-binding.yaml -
-* ссылка на config - 
+* ссылка на role.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_09/role.yaml 
+* ссылка на role-binding.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_09/role-binding.yaml
+* ссылка на config - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_09/config
 
 ## END
