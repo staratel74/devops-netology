@@ -35,9 +35,9 @@
 
 * 06: ![06](img/06.png)
 
-* ссылка на Chart.yaml - 
-* ссылка на values.yaml - 
-* ссылка на deployment-nginx.yaml - 
-* ссылка на service-nginx.yaml - 
+* ссылка на Chart.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_10/Chart.yaml
+* ссылка на values.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_10/values.yaml
+* ссылка на deployment-nginx.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_10/templates/deployment-nginx.yaml
+* ссылка на service-nginx.yaml - https://github.com/staratel74/devops-netology/blob/main/Kubernetes/Task_10/templates/service-nginx.yaml 
 
 ## END
