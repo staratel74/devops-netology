@@ -36,6 +36,6 @@
 * 12: ![12](img/12.png)
 * 13: ![13](img/13.png)
 
-* ссылка на maim.tf - 
-* ссылка на variables.tf - 
+* ссылка на maim.tf - https://github.com/staratel74/devops-netology/blob/main/cloud_project/Task_01/src/main.tf
+* ссылка на variables.tf - https://github.com/staratel74/devops-netology/blob/main/cloud_project/Task_01/src/variables.tf
 ## END
