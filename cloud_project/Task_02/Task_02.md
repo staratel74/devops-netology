@@ -33,7 +33,7 @@
 * 10: ![10](img/10.png)
 
 
-* ссылка на maim.tf - 
-* ссылка на variables.tf -
-* ссылка на index.yaml - 
+* ссылка на maim.tf - https://github.com/staratel74/devops-netology/blob/main/cloud_project/Task_02/src/main.tf
+* ссылка на variables.tf - https://github.com/staratel74/devops-netology/blob/main/cloud_project/Task_02/src/variables.tf
+* ссылка на index.yaml - https://github.com/staratel74/devops-netology/blob/main/cloud_project/Task_02/src/index.yaml
 ## END
