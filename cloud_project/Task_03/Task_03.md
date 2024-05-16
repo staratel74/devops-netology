@@ -1,4 +1,4 @@
-## Домашнее задание к занятию «Вычислительные мощности. Балансировщики нагрузки» 
+## Домашнее задание к занятию «Безопасность в облачных провайдерах» 
 
 
 ### Задание 1. Yandex Cloud 
@@ -16,7 +16,7 @@
 * зашифрованный бакет:
 * 04: ![04](img/04.png)
 
-* ссылка на maim.tf - 
-* ссылка на variables.tf - 
+* ссылка на maim.tf - https://github.com/staratel74/devops-netology/blob/main/cloud_project/Task_03/src/main.tf
+* ссылка на variables.tf - https://github.com/staratel74/devops-netology/blob/main/cloud_project/Task_03/src/variables.tf
 
 ## END
