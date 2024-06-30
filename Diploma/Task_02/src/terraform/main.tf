@@ -56,10 +56,6 @@ resource "yandex_compute_instance" "master_node_1" {
 
 #------------------- worker nodes ----------------------------
 resource "yandex_compute_instance" "worker_node_1" {
-  #count       = 2
-  #name        = "web-${count.index + 1}"
-  #name        = "worker-node-${count.index + 1}"
-  #hostname    = "worker-${count.index + 1}"
   name        = "worker-node-1"
   hostname    = "worker-1"
   zone        = "ru-central1-a"
@@ -98,10 +94,6 @@ resource "yandex_compute_instance" "worker_node_1" {
 }
 # ------------------------------------------------------------
 resource "yandex_compute_instance" "worker_node_2" {
-  #count       = 2
-  #name        = "web-${count.index + 1}"
-  #name        = "worker-node-${count.index + 1}"
-  #hostname    = "worker-${count.index + 1}"
   name        = "worker-node-2"
   hostname    = "worker-2"
   zone        = "ru-central1-a"
