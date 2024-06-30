@@ -27,11 +27,11 @@
   * решение: сделал с через TF S3 bucket
   * 01: ![01](img/01.png)
   * 02: ![02](img/02.png)
-  * ссылка на bucket.tf - 
+  * ссылка на bucket.tf - https://github.com/staratel74/devops-netology/blob/main/Diploma/Task_02/src/terraform/bucket/bucket.tf
   * сделал backend в S3 bucket, созданном ЯО аккаунте
   * 03: ![03](img/03.png)
   * 04: ![04](img/04.png)
-  * ссылка на backend.tf - 
+  * ссылка на backend.tf - https://github.com/staratel74/devops-netology/blob/main/Diploma/Task_02/src/terraform/backend.tf
 * Создайте VPC с подсетями в разных зонах доступности.
   * решение:
   * 05: ![05](img/05.png)
@@ -40,7 +40,7 @@
   * решение:
   * 07: ![07](img/07.png)
   * 08: ![08](img/08.png)
-  * ссылка на main.tf -  
+  * ссылка на main.tf - https://github.com/staratel74/devops-netology/blob/main/Diploma/Task_02/src/terraform/main.tf 
 * В случае использования Terraform Cloud в качестве backend убедитесь, что применение изменений успешно проходит, используя web-интерфейс Terraform cloud.
 
 Ожидаемые результаты:
@@ -57,6 +57,7 @@
 * Команда kubectl get pods --all-namespaces отрабатывает без ошибок.
   * решение: воспользовался, пакетом Kubespray
   * 09: ![09](img/09.png)
+  * ссылка на config - https://github.com/staratel74/devops-netology/blob/main/Diploma/Task_02/src/k8s/config
 
 #### Создание тестового приложения
 
@@ -89,7 +90,7 @@
   * решение: использовал Jenkins
   * 14: ![14](img/14.png)
   * Отредактировал index.html, прописал - Hello! This is my diploma v1.10.0 Сделал коммит, запушил в репозиторий https://github.com/staratel74/nginx-repo В Jenkins запустилась job Diploma_Pipeline, отработал pipeline. 
-  * Ссылка на JenkinsConsoleOutput.txt -  
+  * Ссылка на JenkinsConsoleOutput.txt - https://github.com/staratel74/devops-netology/blob/main/Diploma/Task_02/src/JenkinsConsoleOutput.txt
   * 15: ![15](img/15.png)
   * 16: ![16](img/16.png)
 
