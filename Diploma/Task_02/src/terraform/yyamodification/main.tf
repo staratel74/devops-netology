@@ -1,14 +1,3 @@
-# убрат код
-provider "yandex" {
-  token     = var.yandex_token
-  cloud_id  = var.yandex_cloud_id
-  folder_id = var.yandex_folder_id
-  zone      = var.yandex_zone
-}
-# убрат код
-
-
-
 resource "yandex_vpc_network" "my_vpc" {
   name        = "my-vpc"
   description = "My VPC"
