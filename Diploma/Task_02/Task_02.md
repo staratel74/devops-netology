@@ -1,3 +1,41 @@
+## Дипломный практикум в Yandex.Cloud ДОРАБОТКА
+
+1.	Давайте применять принцип DRY (do not repeat yourself). Не копипастите ресурсы, а сделайте шаблонный код. 
+    Аналогично для subnets. Выведи-те параметры в variables чтобы у вас получился шаблонный код и можно было менять только variables 
+    и таким образом менять параметры кла-стера
+* ответ: код поправил
+* ссылка на main.tf - https://github.com/staratel74/devops-netology/blob/main/Diploma/Task_02/src/terraform/yyamodification/main.tf 
+* ссылка на variables.tf - https://github.com/staratel74/devops-netology/blob/main/Diploma/Task_02/src/terraform/yyamodification/variables.tf
+
+2.	Как получили конфиг? Руками создали?
+* ответ: для установки кластера использовал ansible с Kubespray, предварительно настроив inventory под инфраструктуру.
+* после создания кластера, подключился к мастерноде по ssh, забрал config на сервер где Jenkins установлен.
+* Если парамет-ры кластера поменяются, терраформ пересоздаст но-вый кластер с новыми параметрами как будете созда-вать конфиг?
+* ответ: при использовании в YC Managed Service for Kubernetes получить кубконфиг можно с помощью yc CLI
+* 18: ![18](img/18.png)
+      
+3. Как деплоили мониторинг? Руками?
+* ответ: использовал пакет kube-prometheus
+
+4. использовал Jenkins. Как и где он запущен? Как конфигурировался?
+* ответ: Jenkins установил на ubuntu
+* установил необходимые плагины: Git Plugin, Docker Plugin, Pipeline Plugin
+* настроил credentials для доступа в репозитории GitHub, DokerHub и к кластеру k8s
+
+5.	У вас хардкод версии в файле Jenkins? Не понял, как достигается версионность, как триггерится пайплайн по тегу?
+* ответ: Jenkins опрашивает git repository по расписанию
+* 17: ![17](img/17.png)
+* исправил pipeline, теперь проверяется тег и если тег правильный (здесь он v1.10.9) запускается сборка докер образа, пушится в докерхаб и деплоится в кластер k8s   
+* ссылка на Jenkinsfile - https://github.com/staratel74/nginx-repo/blob/main/Jenkinsfile.groovy
+6.	Почему сервис типа NodePort? не продакшн. Надо использовать HTTP/HTTPS
+* ответ: поправил Service, сделал type: LoadBalancer. В YC поднялся Network Load Balancer.
+* 19: ![19](img/19.png)
+* Теперь можно обойтись без порта:30000
+* 20: ![20](img/20.png)
+
+
+## END
+
 ## Дипломный практикум в Yandex.Cloud
 
 
